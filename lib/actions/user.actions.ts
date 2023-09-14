@@ -1,8 +1,8 @@
-"use server";
+'use server';
 
-import { revalidatePath } from "next/cache";
-import User from "../models/user.model";
-import { connectToDB } from "../mongoose";
+import { revalidatePath } from 'next/cache';
+import User from '../models/user.model';
+import { connectToDB } from '../mongoose';
 
 interface Params {
   userId: string;
@@ -36,10 +36,24 @@ export async function updateUser({
       { upsert: true }
     );
 
-    if (path === "/profile/edit") {
+    if (path === '/profile/edit') {
       revalidatePath(path);
     }
   } catch (error: any) {
     throw new Error(`User cannot be created/updated: ${error.message}`);
+  }
+}
+
+export async function fetchUser(userId: string) {
+  try {
+    connectToDB();
+
+    return await User.findOne({ id: userId });
+    // .populate({
+    //   path: 'communities',
+    //   model: 'Community',
+    // });
+  } catch (error: any) {
+    throw new Error(`Unable to fetch user: ${error.message}`);
   }
 }
