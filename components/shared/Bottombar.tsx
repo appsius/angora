@@ -28,7 +28,8 @@ function Bottombar() {
                   alt={link.label}
                   width={24}
                   height={24}
-                  style={{ height: 'auto' }}
+                  style={{ height: 'auto', width: 'auto' }}
+                  sizes='100vw'
                 />
                 <p className='text-subtle-medium text-light-1 max-xs:hidden'>
                   {link.label.split(/\s+/)[0]}

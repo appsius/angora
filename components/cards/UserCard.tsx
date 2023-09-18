@@ -24,11 +24,12 @@ const UserCard = ({ id, name, username, imgUrl, userType }: Props) => {
           width={48}
           height={48}
           className='rounded-full'
+          sizes='100vw'
         />
 
         <div className='flex-1 text-ellipsis'>
-          <h4 className='text-base-semibold text-light-1'>${name}</h4>
-          <p className='text-small-medium text-gray-1'>@${username}</p>
+          <h4 className='text-base-semibold text-light-1'>{name}</h4>
+          <p className='text-small-medium text-gray-1'>@{username}</p>
         </div>
       </div>
 
