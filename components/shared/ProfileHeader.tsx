@@ -9,7 +9,11 @@ interface Props {
   bio: string;
 }
 
-const ProfileHeader = async ({
+{
+  console.log('deployment');
+}
+
+const ProfileHeader = ({
   accountId,
   authUserId,
   name,
