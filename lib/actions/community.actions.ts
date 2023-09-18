@@ -1,11 +1,9 @@
 'use server';
 
 import { FilterQuery, SortOrder } from 'mongoose';
-
 import Community from '../models/community.model';
 import Thread from '../models/thread.model';
 import User from '../models/user.model';
-
 import { connectToDB } from '../mongoose';
 
 export async function createCommunity(
@@ -36,6 +34,8 @@ export async function createCommunity(
     });
 
     const createdCommunity = await newCommunity.save();
+
+    console.log('', createdCommunity);
 
     // Update User model
     user.communities.push(createdCommunity._id);
