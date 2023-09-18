@@ -6,7 +6,9 @@
 // It's a good practice to verify webhooks. Above article shows why we should do it
 import { Webhook, WebhookRequiredHeaders } from 'svix';
 import { headers } from 'next/headers';
+
 import { IncomingHttpHeaders } from 'http';
+
 import { NextResponse } from 'next/server';
 import {
   addMemberToCommunity,
@@ -42,7 +44,7 @@ export const POST = async (request: Request) => {
     'svix-signature': header.get('svix-signature'),
   };
 
-  // Activitate Webhook in the Clerk Dashboard
+  // Activitate Webhook in the Clerk Dashboard.
   // After adding the endpoint, you'll see the secret on the right side.
   const wh = new Webhook(process.env.NEXT_CLERK_WEBHOOK_SECRET || '');
 
