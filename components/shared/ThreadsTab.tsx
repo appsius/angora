@@ -8,7 +8,7 @@ interface Props {
   accountType: string;
 }
 
-const ThreadsTab = async ({ currentUserId, accountId, accountType }: Props) => {
+async function ThreadsTab({ currentUserId, accountId, accountType }: Props) {
   // Fetch profile threads
   let result = await fetchUserPosts(accountId);
   if (!result) redirect('/');
@@ -40,6 +40,6 @@ const ThreadsTab = async ({ currentUserId, accountId, accountType }: Props) => {
       </section>
     </>
   );
-};
+}
 
 export default ThreadsTab;
