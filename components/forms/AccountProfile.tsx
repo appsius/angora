@@ -34,7 +34,7 @@ interface Props {
   btnTitle: string;
 }
 
-const AccountProfile = ({ user, btnTitle }: Props) => {
+function AccountProfile({ user, btnTitle }: Props) {
   const [files, setFiles] = useState<File[]>([]);
   const { startUpload } = useUploadThing('media');
   const router = useRouter();
@@ -121,6 +121,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     height={96}
                     priority
                     className='rounded-full object-contain'
+                    sizes='100vw'
                   />
                 ) : (
                   <Image
@@ -130,6 +131,7 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
                     height={24}
                     priority
                     className='object-contain'
+                    sizes='100vw'
                   />
                 )}
               </FormLabel>
@@ -215,6 +217,6 @@ const AccountProfile = ({ user, btnTitle }: Props) => {
       </form>
     </Form>
   );
-};
+}
 
 export default AccountProfile;

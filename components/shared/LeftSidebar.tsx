@@ -32,7 +32,8 @@ function LeftSidebar() {
                   alt={link.label}
                   width={24}
                   height={24}
-                  style={{ height: 'auto' }}
+                  style={{ height: 'auto', width: 'auto' }}
+                  sizes='100vw'
                 />
                 <p className='text-light-1 max-lg:hidden'>{link.label}</p>
               </Link>
@@ -50,6 +51,7 @@ function LeftSidebar() {
                 alt={'logout'}
                 width={24}
                 height={24}
+                sizes='100vw'
               />
               <p className='text-light-2 max-lg:hidden'>Logout</p>
             </div>

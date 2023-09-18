@@ -36,6 +36,7 @@ async function Page({ params }: { params: { id: string } }) {
                   width={24}
                   height={24}
                   className='object-contain'
+                  sizes='100vw'
                 />
 
                 <p className='max-sm:hidden'>{tab.label}</p>

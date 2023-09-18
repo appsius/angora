@@ -27,6 +27,7 @@ const ProfileHeader = async ({
               src={imgUrl}
               alt='Profile image'
               fill
+              sizes='100vw'
             />
           </div>
 
