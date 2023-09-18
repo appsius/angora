@@ -9,6 +9,10 @@ interface Props {
   bio: string;
 }
 
+{
+  console.log('deployment');
+}
+
 const ProfileHeader = ({
   accountId,
   authUserId,
