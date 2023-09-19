@@ -7,10 +7,7 @@ interface Props {
   username: string;
   imgUrl: string;
   bio: string;
-}
-
-{
-  console.log('deployment');
+  type?: 'User' | 'Community';
 }
 
 const ProfileHeader = ({

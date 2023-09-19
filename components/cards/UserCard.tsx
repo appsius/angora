@@ -17,7 +17,7 @@ const UserCard = ({ id, name, username, imgUrl, userType }: Props) => {
 
   return (
     <>
-      <article className='user-card'>
+      <article className='user-card w-full'>
         <div className='user-card_avatar'>
           <Image
             src={imgUrl}
